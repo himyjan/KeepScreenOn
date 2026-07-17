@@ -45,6 +45,6 @@ class PreferencesRepository @Inject constructor(private val preferencesDataStore
     }
 
     val maximumTimeout = preferencesDataStoreSource.getFlow(preferencesDataStoreSource.maximumTimeoutKey).map { value ->
-        value ?: 600000
+        value ?: Int.MAX_VALUE
     }
 }
